@@ -20,9 +20,9 @@ resource "aws_instance" "app_server" {
   user_data = <<-EOF
               #! /bin/bash
               sudo yum update -y
-              sudo yum install -y mod_ssl
-              cd /etc/pki/tls/certs
-              sudo ./make-dummy-cert localhost.crt
+              #sudo yum install -y mod_ssl
+              #cd /etc/pki/tls/certs
+              #sudo ./make-dummy-cert localhost.crt
               sudo yum -y install httpd
               sudo service httpd start
               echo "<h1>Verdinha app ...now I m ready</h1>" >> /var/www/html/index.html
@@ -33,8 +33,6 @@ resource "aws_instance" "app_server" {
    
    
   }
-
-
 
 
 

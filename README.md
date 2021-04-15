@@ -1,4 +1,4 @@
-# stone/verdinha app
+# verdinha app
 
 
 
