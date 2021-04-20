@@ -23,7 +23,7 @@ resource "aws_instance" "app_server" {
               #sudo yum install -y mod_ssl
               #cd /etc/pki/tls/certs
               #sudo ./make-dummy-cert localhost.crt
-              sudo yum -y install httpd
+              sudo wget https://s3.cn-north-1.amazonaws.com.cn/amazoncloudwatch-agent/amazon_linux/amd64/latest/amazon-cloudwatch-agent.rpm
               sudo service httpd start
               echo "<h1>Verdinha app ...now I m ready</h1>" >> /var/www/html/index.html
               curl http://169.254.169.254/latest/meta-data/public-ipv4
